@@ -1,0 +1,35 @@
+# Uso: copie .env.example para .env, ajuste FOLDER_ROOT e rode `docker compose up -d --build`.
+# App: http://localhost:${FRONT_PORT:-5173}
+
+services:
+  backend:
+    build:
+      context: ./musicStreaming-api
+    container_name: backend
+    restart: unless-stopped
+    # roda com o seu usuário, para que o sync crie/mova arquivos com o dono certo
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      MUSIC_ROOT: /app/streaming
+      MUSIC_DATA: /app/data
+      JAVA_OPTS: ${JAVA_OPTS:--XX:MaxRAMPercentage=75}
+    volumes:
+      - "${FOLDER_ROOT:?defina FOLDER_ROOT no .env com a pasta das músicas}:/app/streaming"
+      - "music-data:/app/data"
+    # só para depuração local; o navegador acessa a API pelo nginx do frontend
+    ports:
+      - "127.0.0.1:${API_PORT:-8080}:8080"
+
+  frontend:
+    build:
+      context: ./musicStreaming-front
+    container_name: frontend
+    restart: unless-stopped
+    ports:
+      - "${FRONT_PORT:-5173}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+
+volumes:
+  music-data:

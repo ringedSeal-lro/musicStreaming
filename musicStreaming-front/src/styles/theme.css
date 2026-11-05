@@ -1,0 +1,62 @@
+/* Tokens do tema. Para trocar o visual, mude só as variáveis abaixo. */
+:root {
+  color-scheme: dark;
+
+  /* superfícies */
+  --bg: #0b0b0f;
+  --surface: #131318;
+  --surface-2: #1c1c23;
+  --surface-3: #26262f;
+  --surface-hover: #2b2b35;
+  --border: #2a2a33;
+
+  /* texto */
+  --text: #f3f3f6;
+  --text-muted: #a6a6b4;
+  --text-faint: #71717f;
+
+  /* destaque único: violeta */
+  --accent: #a78bfa;
+  --accent-strong: #8b5cf6;
+  --accent-soft: rgb(167 139 250 / 0.16);
+  --accent-contrast: #160c33;
+
+  --danger: #f87171;
+  --danger-soft: rgb(248 113 113 / 0.14);
+  --success: #4ade80;
+
+  /* espaçamentos */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* forma */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+  --shadow: 0 12px 32px rgb(0 0 0 / 0.5);
+
+  /* tipografia */
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-md: 15px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+
+  /* medidas do layout */
+  --sidebar-w: 300px;
+  --sidebar-compact-w: 76px;
+  --player-h: 88px;
+  --bottom-nav-h: 64px;
+  --mini-player-h: 60px;
+  --touch: 44px;
+  --gap: 8px;
+
+  --ease: 160ms ease;
+}

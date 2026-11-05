@@ -1,0 +1,87 @@
+### Variáveis de ambiente e segredos ###
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+*.crt
+secrets/
+application-local.properties
+application-dev.properties
+
+### Banco H2 / dados locais ###
+data/
+*.mv.db
+*.trace.db
+*.lock.db
+
+### Logs ###
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+### Maven / Spring ###
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Node / Vite ###
+node_modules/
+dist/
+dist-ssr/
+coverage/
+.vite/
+
+### Ferramentas e assistentes ###
+.claude/
+CLAUDE.md
+.kilo/
+.kilocode/
+.cursor/
+.aider*
+.continue/
+.copilot/
+PROMPT*.md
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/*
+!.vscode/extensions.json
+
+### Sistema ###
+.DS_Store
+Thumbs.db
+*.swp
+*.sw?
